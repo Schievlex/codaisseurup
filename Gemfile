@@ -39,6 +39,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'pry-rails', '~> 0.3.6'
+
+  gem 'factory_girl_rails', '4.7.0'
+  gem 'faker', '1.6.6'
+
 end
 
 group :development do
@@ -65,3 +69,5 @@ gem 'jquery-rails', '~> 4.3.1'
 
 # Use Devise for authentication
 gem 'devise', '~> 4.2'
+
+gem 'shoulda-matchers', '~> 3.1'
