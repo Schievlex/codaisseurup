@@ -3,18 +3,20 @@
 
   <div class="panel-body">
 
-    <p>Location: <%= @event.location %></p>
+    <p>location: <%= @event.location %></p>
+
 
     <!-- Main Info -->
     <h4>Main Info</h4>
-    <p>Price per Person <%= @event.price %></p>
+    <p>Price per Person: <%= @event.price %></p>
     <p>Capacity: <%= @event.capacity %></p>
 
     <!-- About -->
     <h4>About</h4>
-    <p><%= @event.description %></p>
-    <p>Starts at: <%= @event.starts_at %></p>
-    <p>Ends at: <%= @event.ends_at %></p>
+    <p>Descriiption: <%= @event.description %></p>
+    <p>Start at:<%= @event.starts_at %></p>
+    <p>End at:<%= @event.ends_at %></p>
+
 
     <!-- Amenities -->
     <h4>Amenities</h4>
@@ -23,8 +25,12 @@
       <li><%= !@event.includes_drinks ? ("<del>includes_drinks</del>").html_safe : "Includes Drinks" %></li>
     </ul>
 
-    
-    </div>
+    <h4>Categories</h4>
+    <% @categories.each do |category| %>
+      <span class="label label-success"><%= category.name %></span>
+    <% end %>
+
+  </div>
 
 </div>
 
