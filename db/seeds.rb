@@ -1,5 +1,10 @@
-Category.destroy_all
-User.destroy_all
+Photo.delete_all
+Category.delete_all
+Event.delete_all
+Profile.delete_all
+User.delete_all
+
+
 
 hobby = Category.create!(name: "Hobby")
 it = Category.create!(name: "IT")
@@ -58,5 +63,10 @@ categories: [it,work_skill]
   starts_at: "07/04/2017 19:00",
   ends_at: "07/04/2017 20:30",
   user: may,
-  categories: [cooking]
-   )
+  categories: [cooking],
+  )
+
+# Photos
+photo1 = Photo.create(remote_image_url: "http://res.cloudinary.com/daun7eksg/image/upload/v1499347503/vincent-van-gogh-self_ubeaau.jpg", event: event2)
+photo2 = Photo.create(remote_image_url: "http://res.cloudinary.com/daun7eksg/image/upload/v1499347504/Van-Gogh-self2_ubtnc6.jpg", event: event2)
+photo3 = Photo.create(remote_image_url: "http://res.cloudinary.com/daun7eksg/image/upload/v1499346841/young_woman_water_jug.jpg", event: event2)
