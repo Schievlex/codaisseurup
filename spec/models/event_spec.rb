@@ -29,4 +29,11 @@ RSpec.describe Event, type: :model do
     end
   end
 
+   describe "associations" do
+     it { is_expected.to belong_to :user}
+     it { is_expected.to have_and_belong_to_many :categories}
+  end
+
+
+
 end

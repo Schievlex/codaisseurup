@@ -71,3 +71,7 @@ gem 'jquery-rails', '~> 4.3.1'
 gem 'devise', '~> 4.2'
 
 gem 'shoulda-matchers', '~> 3.1'
+
+gem 'rails_12factor', group: :production
+
+gem 'carrierwave', '0.11.2'
