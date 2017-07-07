@@ -34,6 +34,7 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @categories = Category.all
     if current_user.id == @event.user.id
        @photos = @event.photos
      else
