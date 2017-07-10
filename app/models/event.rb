@@ -7,6 +7,8 @@ class Event < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true, length: { maximum: 500 }
 
+  has_many :registrations, dependent: :destroy
+  has_many :guests, through: :registrations, source: :user
 
   def bargain?
     price < 30
