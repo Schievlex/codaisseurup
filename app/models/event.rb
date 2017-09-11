@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
-  belongs_to :user
-  has_many :photos
+  belongs_to :user, optional: true
+  has_many :photos, dependent: :destroy
 
   has_and_belongs_to_many :categories
 
@@ -17,5 +17,6 @@ class Event < ApplicationRecord
   def self.order_by_price
     order :price
   end
+
 
 end
